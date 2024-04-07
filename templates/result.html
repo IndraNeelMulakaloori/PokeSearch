@@ -14,7 +14,7 @@
         <img id = "pokemon" src="{{response['picture']}}" alt="pokemon-picture" onmouseover="playAudio('{{response['cries']}}')"/>
 
         {% for key, value in response.items() %}
-        {% if key != 'name'  and key != 'picture'%}
+        {% if key != 'name'  and key != 'picture' and key != 'cries'%}
         <p>{{key}} : {{value}}</p>
         {% endif %}
         {% endfor %}
