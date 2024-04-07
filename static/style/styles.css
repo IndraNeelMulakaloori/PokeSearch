@@ -1,0 +1,11 @@
+.title{
+    text-align: center;
+    font-family: 'Pokemon Hollow','Pokemon Solid', sans-serif;
+    font-size: 400%;
+    color: #FFCC00;
+    display: inline-block;
+    margin-top: 7%;
+    margin-left: 37.5%;
+    text-shadow: 10px 2px  #0075BE, 2px 3px  #0075BE, 1px 0  #0075BE, 0 -1px  #0075BE;
+    /* transform: translate(120px, 50%); */
+}
