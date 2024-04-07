@@ -22,7 +22,7 @@ def fetchResult(pokemon_name):
 def stripData(data):
 
     result = {}
-    result['name'] = data["name"].capitalize
+    result['name'] = data["name"].capitalize()
     result['weight'] = data["weight"]
     result['height'] = data['height']
     result['base_experience'] = data['base_experience']

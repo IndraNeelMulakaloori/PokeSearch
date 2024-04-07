@@ -6,11 +6,12 @@
     <title>{{response['name']}} | Pokemon</title>
     <link href="https://fonts.cdnfonts.com/css/pokemon-hollow" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static',filename='style/styles.css') }}" >
+    <script src="{{ url_for('static', filename='result.js') }}"></script>
 </head>
 <body class="center-content">
         
         <h1>{{response['name']}}</h1>
-        <img id = "pokemon" src="{{response['picture']}}" alt="pokemon-picture">
+        <img id = "pokemon" src="{{response['picture']}}" alt="pokemon-picture" onmouseover="playAudio('{{response['cries']}}')"/>
 
         {% for key, value in response.items() %}
         {% if key != 'name'  and key != 'picture'%}
