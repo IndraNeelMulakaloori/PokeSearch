@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="{{ url_for('static',filename='style/styles.css') }}" >
 </head>
 <body>
-    <h1 class="title semi-circle">PokéSearch</h1>
+    <div class="center-content">
+        <h1 class="title">PokéSearch</h1>
 
-    <form action="/result" method="post">
-        <input type="text" name="name" id="name" placeholder="Enter Pokemon Name"/>  
-        <button type="submit">Search </button>
+        <form action="/result" method="post">
+        <input type="text" name="pokemon" placeholder="Enter Pokemon Name"/>  
+        <button type="submit">Search</button>
+        
     </form>
+    </div>
 </body>
-</html>
+</html> 
