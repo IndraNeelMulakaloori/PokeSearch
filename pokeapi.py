@@ -44,8 +44,8 @@ def stripData(data):
     for record in data['moves']:
         moves.append(record['move']['name'])
     
-    if len(moves) > 10:
-        moves = moves[:10]
+    if len(moves) > 5:
+        moves = moves[:5]
     result['moves'] = moves
 
     result['cries'] = data['cries']['latest']
