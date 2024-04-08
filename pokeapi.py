@@ -14,7 +14,7 @@ def fetchResult(pokemon_name):
     response = requests.get(URL)
 
     if response.status_code == 404:
-        return "Not Found"
+        return {}
     
     data = stripData(response.json())
     return data
@@ -43,6 +43,9 @@ def stripData(data):
 
     for record in data['moves']:
         moves.append(record['move']['name'])
+    
+    if len(moves) > 10:
+        moves = moves[:10]
     result['moves'] = moves
 
     result['cries'] = data['cries']['latest']

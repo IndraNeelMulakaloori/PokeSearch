@@ -1,3 +1,24 @@
+
+/* html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} */
+
+.homepage{
+    background-image: url('/static/pokemon_homepage.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.result-page{
+    background-image: linear-gradient(to top left,#e8bd11,#008DDA);
+    
+}
+
 .title{
     /* text-align: center; */
     font-family: 'Pokemon Hollow','Pokemon Solid', sans-serif;
@@ -15,6 +36,30 @@
 
 .center-content{
     /* display: inline-block; */
-
     text-align: center;
+}
+
+.error-img{
+    width:475px;
+    height : 475px;
+}
+
+.back-btn{
+    margin-top: 0.5%;
+    margin-left: 2%;
+}
+.bi-arrow-left-circle-fill{
+    font-size: 1.75em;
+    color: black;
+}
+
+.navbar>.container-fluid{
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control{
+    line-height: 3.5;
+    
 }
