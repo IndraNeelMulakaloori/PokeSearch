@@ -2,7 +2,7 @@ from flask import  Flask,render_template,request
 import requests
 import pokeapi
 
-
+port = process.env.PORT or 4000
 app = Flask(__name__)
 
 @app.route("/",methods = ["GET", "POST"])
@@ -21,7 +21,7 @@ def result():
 
     return render_template('result.html',response = response)
 
-if __name__ == '__main__':
-    app.run(port = 8000,debug=True)
+# if __name__ == '__main__':
+#     app.run(port = port,debug=True)
 
     
