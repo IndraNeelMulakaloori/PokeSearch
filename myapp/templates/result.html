@@ -17,14 +17,26 @@
         <h5 class="card-title pokemon-name">
             {{response['name']}}
         </h5>
+        <table class="table ">
+            <thead class="table-warning">
+                <tr>
+                    <th>Parameters </th>
+                    <th>Value</th>    
+                </tr>
+            </thead>
+            <tbody class="table-success">
                 {% for key, value in response.items() %}
                 {% if key != 'name'  and key != 'picture' and key != 'cries'%}
-            <!-- <p class="card-text"> -->
-                <p style="color: white;">{{key}}</p> 
-                <p class="card-text"> {{value}}</p>
-            <!-- </p> -->
-            {% endif %}
-            {% endfor %}
+                <!-- <p class="card-text"> -->
+                <tr>
+                    <td>{{key}}</td> 
+                <td class="card-text"> {{value}}</td>
+                </tr>
+                <!-- </p> -->
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
       </div>
     </div>
     
@@ -32,3 +44,4 @@
     <script src="{{ url_for('static', filename='result.js') }}"></script>
 </body>
 {% endblock %}
+

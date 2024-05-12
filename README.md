@@ -1,6 +1,6 @@
 # PokeSearch
 
-### Video Demo : []()
+### Video Demo : [Click Here](https://youtu.be/3IfHZCVvMD8)
 
 ### Description
 
@@ -77,17 +77,21 @@ This template file extends ``layout.html``. Within the overridden `main` block, 
 
 `result.html`
 
-This template also extends `layout.html` and customizes the ``main`` block. It presents a result page for the "PokéSearch" application. The body is styled with the "result-page" class. It includes a back button linking to the homepage. Card component with Bootsrap is implemented to display Pokemon info within a Card.
+This template also extends `layout.html` and customizes the ``main`` block. It presents a result page for the "PokéSearch" application. The body is styled with the "result-page" class. It includes a back button linking to the homepage. Card component with Bootsrap is implemented to display Pokemon info within a Card and a table.
 ```
 
- {% for key, value in response.items() %}
+  <tbody class="table-success">
+                {% for key, value in response.items() %}
                 {% if key != 'name'  and key != 'picture' and key != 'cries'%}
-            <!-- <p class="card-text"> -->
-                <p style="color: white;">{{key}}</p> 
-                <p class="card-text"> {{value}}</p>
-            <!-- </p> -->
-            {% endif %}
-            {% endfor %}
+                <!-- <p class="card-text"> -->
+                <tr>
+                    <td>{{key}}</td> 
+                <td class="card-text"> {{value}}</td>
+                </tr>
+                <!-- </p> -->
+                {% endif %}
+                {% endfor %}
+            </tbody>
 
 ```
 
@@ -140,3 +144,8 @@ Including a LICENSE file in a GitHub repository is a standard practice encourage
 ### Deployment
 
 Deployed on [Render](https://pokesearch-mhgv.onrender.com)
+
+### Future Plans
+
+- **GraphQL** for convinent fetching of data and avoid redundancies
+- Perform some analytics and scale it up for commericial purposes.
